@@ -1,0 +1,11 @@
+@import "base/normalize.scss";
+@import "base/typography.scss";
+
+@import "libs/mixins.scss";
+@import "libs/variables.scss";
+
+* {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+  }

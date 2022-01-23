@@ -1,0 +1,40 @@
+footer {
+  padding: 20px 0 20px 0;
+  background-color: #353535;
+}
+
+footer .footer__title {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+footer .footer__items {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+footer .footer__items a {
+  text-decoration: none;
+  color: #000000;
+  color: #ffffff;
+}
+
+footer .footer__items a i {
+  margin-right: 10px;
+}
+
+footer .footer__items a .fa-hands-helping {
+  font-size: 12px;
+}
+
+footer .footer-item {
+  margin-bottom: 8px;
+}
+/*# sourceMappingURL=footer.css.map */

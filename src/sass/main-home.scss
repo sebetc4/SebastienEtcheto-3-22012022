@@ -1,0 +1,180 @@
+@import "libs/mixins.scss";
+@import "libs/variables.scss";
+
+// Section principale
+main {
+    width: 100%;
+}
+
+// Box de localisation
+.location {
+    
+    @include flex;
+    background-color: $dark-background;
+    box-shadow: 0px 2px 3px  rgba(50, 50, 50, 0.15) inset;
+    
+    .location__icon {
+        margin-right: 20px;
+    }
+    .location__text {
+        font-weight: 600;
+    }
+}
+
+// Section de présentation
+.presentation {
+    @include padding-section;
+    text-align: center;
+    background-color: $light-background;
+
+    .presentation__title {
+        @include center-width(70%);
+        font-size: 24px;
+    }
+
+    .presentation__text {
+        @include center-width(90%);
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .presentation__button {
+        margin-top: 15px;
+        display: inline-block;
+        @include main-button;
+    }
+
+}
+
+// Section de Fonctionnement
+.functioning {
+        @include padding-section;
+        @include center-width(90%);
+        max-width: 500px;
+    .functioning__title {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    .functioning__steps {
+        width: 100%;
+        max-width: 500px;
+        @include list-style;
+    }
+    .functioning-step {
+        margin-bottom: 20px;
+        margin-left: 11px;
+        padding: 12px 0;
+        @include flex($j-c: flex-start);
+        border-radius: 25px;
+        box-shadow: $box-shadow-button;        
+        background-color: $light-background;
+        @include link-style;
+        
+        .functioning-step__number {
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            background-color: $primary-color;
+            color: $light-text;
+            font-size: 14px;
+            transform: translateX(-50%);
+        }
+
+        .functioning-step__icon {
+            padding: 0 7% 0 4%;
+            font-size: 19px;
+        }
+
+        .functioning-step__text {
+            color: $dark-text;
+            font-weight: 500;
+        }
+    }
+}
+
+// Section de Restaurant
+.restaurants {
+    @include padding-section;
+    
+    background-color: $light-background;
+
+    .restaurants__title {
+        @include center-width(90%);
+        max-width: 500px;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .restaurants__cards {
+        @include center-width(90%);
+        max-width: 500px;
+        @include list-style;
+
+        a {
+            @include link-style;
+        }
+    }
+
+    .restaurants-card {
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: $box-shadow-button;
+        overflow: hidden;
+        
+        .restaurants-card__new {
+            position: absolute;
+            right: 10px;
+            padding: 5px;
+            border-radius: 2px;
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 40);
+            font-size: 14px;
+            font-weight: 500;
+
+        }
+
+        .restaurants-card__image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .restaurants-card__infos {
+            position: relative;
+            padding: 0 0 15px 20px;
+
+            .restaurants-card__infos-title {
+                margin: 10px 0 0 0;
+            }
+
+            .restaurants-card__infos-text {
+                margin: 5px 0 0 0;
+                font-size: 17px;
+                font-weight: 300;
+            }
+
+            .restaurants-card__infos-like {
+                position: absolute;
+                right: 20px;
+                bottom: 30px;
+                width: 25px;
+                fill-opacity: 0;
+                stroke: black;
+                transition: 
+                    fill-opacity 0.5s 0.2s ease-out,
+                    stroke-opacity 0.5s ease-in-out;
+            
+                &:hover {
+                    fill-opacity: 1;
+                    stroke-opacity: 0;
+                }               
+            }
+        }
+    }
+}
+
+

@@ -14,7 +14,23 @@
 @mixin main-button {
     border-radius: 50px;
     padding: 15px 15px;
-    text-decoration: none;
     background: $button-background;
+    box-shadow: $box-shadow-button;  
     color: $light-text;
+    text-decoration: none;
+}
+
+@mixin padding-section {
+    padding-top: 25px;
+    padding-bottom: 50px; 
+}
+
+@mixin list-style {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin link-style {
+    text-decoration: none;
+    color: $dark-text;
 }

@@ -2,11 +2,9 @@
 @import "libs/variables.scss";
 
 header {
-    position: relative;
     z-index: 2;
     padding: 16px 0;
     @include flex;
-    box-shadow: 1px -3px 21px 3px rgba(0,0,0,0.2);    
 
     .header__logo {
         width: 45%;

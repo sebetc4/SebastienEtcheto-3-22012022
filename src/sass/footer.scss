@@ -7,14 +7,14 @@ footer {
     background-color: $footer-background;
 
     .footer__title {
-        @include center-width(90%);
+        @include center-mobile;
         margin: 0 auto;
         color: $light-text;
         font-size: 18px;
     }
 
     .footer__items {
-        @include center-width(90%);
+        @include center-mobile;
         @include list-style;
 
         a {

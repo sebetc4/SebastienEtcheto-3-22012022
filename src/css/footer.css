@@ -5,6 +5,7 @@ footer {
 
 footer .footer__title {
   width: 90%;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
@@ -14,6 +15,7 @@ footer .footer__title {
 
 footer .footer__items {
   width: 90%;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;

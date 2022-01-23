@@ -343,7 +343,7 @@ template {
   display: none;
 }
 
-.footer__title {
+.footer__title, .menu__title {
   font-family: 'Shrikhand', cursive;
 }
 

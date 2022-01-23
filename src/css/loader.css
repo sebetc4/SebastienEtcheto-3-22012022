@@ -46,6 +46,24 @@
   }
 }
 
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .loader {
   z-index: 99;
   position: fixed;
@@ -65,8 +83,8 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(234, 234, 234, 0.9);
-  -webkit-animation: fade-out 0.5s ease-out 2s 1 normal forwards;
-          animation: fade-out 0.5s ease-out 2s 1 normal forwards;
+  -webkit-animation: fade-out 0.5s ease-out 2s 1 forwards;
+          animation: fade-out 0.5s ease-out 2s 1 forwards;
 }
 
 .loader .loader__circles {
@@ -113,5 +131,23 @@
   margin-left: 30px;
   font-size: 30px;
   font-weight: bold;
+}
+
+.loader .loader__text .loader__point1 {
+  color: #99E2D0;
+  -webkit-animation: myAnim 0.1s ease 0.6s 1 normal backwards;
+          animation: myAnim 0.1s ease 0.6s 1 normal backwards;
+}
+
+.loader .loader__text .loader__point2 {
+  color: #FF79DA;
+  -webkit-animation: myAnim 0.1s ease 1.2s 1 normal backwards;
+          animation: myAnim 0.1s ease 1.2s 1 normal backwards;
+}
+
+.loader .loader__text .loader__point3 {
+  color: #9356DC;
+  -webkit-animation: myAnim 0.1s ease 1.8s 1 normal backwards;
+          animation: myAnim 0.1s ease 1.8s 1 normal backwards;
 }
 /*# sourceMappingURL=loader.css.map */

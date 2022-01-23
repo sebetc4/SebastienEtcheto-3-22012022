@@ -9,7 +9,7 @@
     height: 100%;
     @include flex;
     background-color: rgba($dark-background, 0.9);
-    animation: fade-out 0.5s ease-out 2s 1 normal forwards;
+    animation: fade-out 0.5s ease-out 2s 1 forwards;
 
     .loader__circles {
         position: relative;
@@ -46,5 +46,18 @@
         margin-left: 30px;
         font-size: 30px;
         font-weight: bold;
+
+        .loader__point1 {
+            color: $tertiary-color;
+            animation: myAnim 0.1s ease 0.6s 1 normal backwards;
+        }
+        .loader__point2 {
+            color: $secondary-color;
+            animation: myAnim 0.1s ease 1.2s 1 normal backwards;
+        }
+        .loader__point3 {
+            color: $primary-color;
+            animation: myAnim 0.1s ease 1.8s 1 normal backwards;
+        }
     }
 }

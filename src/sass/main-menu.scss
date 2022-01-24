@@ -1,5 +1,6 @@
 @import "libs/mixins.scss";
 @import "libs/variables.scss";
+@import "libs/animations.scss";
 
 .main__image {
     width: 100%;
@@ -56,28 +57,34 @@
 }
 
 .menu-card {
-    height: 75px;
+    height: 70px;
     background-color: $light-text;
     box-shadow: $box-shadow-button;
     border-radius: 15px;
+    overflow: hidden;
     display: flex;
     justify-content: flex-end;
     
     .menu-card__infos {
-        padding-left: 20px;
-        flex-grow: 0;
+        min-width: 0;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         flex: 1;
     }
 
     .menu-card__infos-title {
-        margin: 0;
-        font-size: 20px;
+        margin: 10px 0 0 0;
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         
-        white-space: nowrap
     }
 
     .menu-card__infos-text {
-        margin: 0;
+        margin: 0 0 15px 0;
     }
 
     .menu-card__price {
@@ -85,17 +92,32 @@
         @include flex;
         font-weight: 600;
     }
-    .menu-card__valid {
-        overflow: hidden;
-        width: 0;
-        @include flex;
+
+    .menu-card__check {
+        width: 0px;
+        display: flex;
+        align-items: center;
         background-color: $tertiary-color;
-        
+        transition: width 0.5s;
+        overflow: hidden;
+
+        i {
+            margin-left: 20px;
+            padding: 3px;
+            border-radius: 50%;
+            font-size: 13px;
+            background-color: $light-text;
+            color: $tertiary-color;
+        }
     }
 
     &:hover {
-        .menu-card__valid { 
-            min-width: 17%;
+        .menu-card__check {
+            width: 58px;
+
+        i {
+            animation: spin-check 0.5s linear 1 forwards;
+        }
         }
     }
     

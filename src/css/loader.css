@@ -1,4 +1,4 @@
-@-webkit-keyframes spin {
+@-webkit-keyframes spin-loader {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -9,10 +9,40 @@
   }
 }
 
-@keyframes spin {
+@keyframes spin-loader {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-check {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  30% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-check {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  30% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -46,7 +76,7 @@
   }
 }
 
-@-webkit-keyframes myAnim {
+@-webkit-keyframes fade-point {
   0% {
     opacity: 0;
   }
@@ -55,7 +85,7 @@
   }
 }
 
-@keyframes myAnim {
+@keyframes fade-point {
   0% {
     opacity: 0;
   }
@@ -95,8 +125,8 @@
   border-radius: 50px;
   border: 3px solid transparent;
   border-top-color: #9356DC;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  -webkit-animation: spin-loader 1s linear infinite;
+          animation: spin-loader 1s linear infinite;
 }
 
 .loader .loader__circles::before {
@@ -109,8 +139,8 @@
   border-radius: 50px;
   border: 3px solid transparent;
   border-top-color: #FF79DA;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  -webkit-animation: spin-loader 1s linear infinite;
+          animation: spin-loader 1s linear infinite;
 }
 
 .loader .loader__circles:after {
@@ -123,8 +153,8 @@
   border-radius: 50px;
   border: 3px solid transparent;
   border-top-color: #99E2D0;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  -webkit-animation: spin-loader 2s linear infinite;
+          animation: spin-loader 2s linear infinite;
 }
 
 .loader .loader__text {
@@ -135,19 +165,19 @@
 
 .loader .loader__text .loader__point1 {
   color: #99E2D0;
-  -webkit-animation: myAnim 0.1s ease 0.6s 1 normal backwards;
-          animation: myAnim 0.1s ease 0.6s 1 normal backwards;
+  -webkit-animation: fade-point 0.1s ease 0.6s 1 normal backwards;
+          animation: fade-point 0.1s ease 0.6s 1 normal backwards;
 }
 
 .loader .loader__text .loader__point2 {
   color: #FF79DA;
-  -webkit-animation: myAnim 0.1s ease 1.2s 1 normal backwards;
-          animation: myAnim 0.1s ease 1.2s 1 normal backwards;
+  -webkit-animation: fade-point 0.1s ease 1.2s 1 normal backwards;
+          animation: fade-point 0.1s ease 1.2s 1 normal backwards;
 }
 
 .loader .loader__text .loader__point3 {
   color: #9356DC;
-  -webkit-animation: myAnim 0.1s ease 1.8s 1 normal backwards;
-          animation: myAnim 0.1s ease 1.8s 1 normal backwards;
+  -webkit-animation: fade-point 0.1s ease 1.8s 1 normal backwards;
+          animation: fade-point 0.1s ease 1.8s 1 normal backwards;
 }
 /*# sourceMappingURL=loader.css.map */

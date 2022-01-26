@@ -1,34 +1,46 @@
-@import "libs/mixins.scss";
-@import "libs/variables.scss";
-@import "libs/animations.scss";
+@import "base/normalize";
+@import "base/typography";
+@import "libs/variables";
+@import "libs/mixins";
+@import "libs/animations";
+@import "layout/content";
+@import "layout/header";
+@import "layout/footer";
 
 .main__image {
-    width: 100%;
-    height: 260px;
-    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
+    height: calc(160px + 15vw);
+    max-height: 300px;
+
+    img{
+        position: absolute;
+        width: 100%;
+        max-width: 1600px;
+        height: calc(200px + 15vw); 
+        max-height: 450px;
+        object-fit: cover;
+    }
+
 }
 
 .menu {
-    margin-top: -40px;
+    position: relative;
     width: 100%;
+    padding-top: 15px;
     border-radius: 45px 45px 0 0;
     background-color: $light-background;
 
     &__title {
-        padding-top: 15px;
         @include flex($j-c: space-between);
         @include center-mobile;
         
         h2 {
-            font-size:calc(28px + 2vw);
+            font-size:28px;
         }
     }
 
     &__like {
-        @include like
-
+        @include like;
+        margin-right: 25px;
     }
 }
 
@@ -134,9 +146,9 @@
     }
 }
 
-@media screen and(min-width: 1250px) {
+@media screen and(min-width: 1100px) {
     .menu-items {
-        max-width: 80%;
+        max-width: 90%;
         display: flex;
         justify-content: space-between;
     }
@@ -146,25 +158,42 @@
     }
 
     .menu__title {
-        max-width: 40% ;
+        max-width: 40%;
+
+        h2 {
+            font-size: calc(23px + 2vw)
+        }
     }
 
     .menu__like {
-        margin-left: 20px;
-        width: calc(27px + 1vw);
-        height: calc(27px + 1vw);
+        width: 41px;
+        height: 41px;
         svg {
-            width: calc(27px + 1vw);
-            height: calc(27px + 1vw);
+            width: 41px;
+            height: 41px;
         }
         &::before {
-            width: calc(35px + 1vw);
-            height: calc(35px + 1vw);
-            top: calc(25px + 1vw);
+            width: 49px;
+            height: 49px;
+            top: 39px;
 
         }            
     }
 }
 
+@media screen and(min-width: 1350px) {
+    .menu {
+        max-width: 1350px;
+        margin-right: auto;
+        margin-left: auto;    
+    }
+
+    .menu__title {
+        h2 {
+            font-size: 55px
+        }
+    }
+
+}
 
   

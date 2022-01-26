@@ -1,5 +1,13 @@
-@import "libs/mixins.scss";
-@import "libs/variables.scss";
+@import "base/normalize";
+@import "base/typography";
+@import "libs/variables";
+@import "libs/mixins";
+@import "libs/animations";
+@import "layout/content";
+@import "layout/loader";
+@import "layout/header";
+@import "layout/footer";
+
 
 // Section principale
 main {

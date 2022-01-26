@@ -164,21 +164,6 @@
             font-size: calc(23px + 2vw)
         }
     }
-
-    .menu__like {
-        width: 41px;
-        height: 41px;
-        svg {
-            width: 41px;
-            height: 41px;
-        }
-        &::before {
-            width: 49px;
-            height: 49px;
-            top: 39px;
-
-        }            
-    }
 }
 
 @media screen and(min-width: 1350px) {
@@ -190,7 +175,7 @@
 
     .menu__title {
         h2 {
-            font-size: 55px
+            font-size: 50px
         }
     }
 

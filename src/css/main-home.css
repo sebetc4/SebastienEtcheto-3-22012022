@@ -895,50 +895,55 @@ main {
 .restaurants-card-bottom__like {
   margin-right: 20px;
   position: relative;
+}
+
+.restaurants-card-bottom__like svg {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  stroke: black;
+  fill: none;
+  stroke-opacity: 1;
+  stroke-width: 0.7;
+  -webkit-transition: stroke-opacity 2.5s ease-in-out;
+  transition: stroke-opacity 2.5s ease-in-out;
+  cursor: pointer;
+}
+
+.restaurants-card-bottom__like .like-background {
+  width: 25px;
+  height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 27px;
-  height: 27px;
   overflow: hidden;
   -webkit-mask: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 15 15" xml:space="preserve"><path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75 C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/></svg>') center/contain;
           mask: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 15 15" xml:space="preserve"><path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75 C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/></svg>') center/contain;
 }
 
-.restaurants-card-bottom__like svg {
-  width: 25px;
-  stroke: black;
-  fill: none;
-  stroke-opacity: 1;
-  -webkit-transition: stroke-opacity 2s ease-in-out;
-  transition: stroke-opacity 2s ease-in-out;
-  cursor: pointer;
-}
-
-.restaurants-card-bottom__like::before {
+.restaurants-card-bottom__like .like-background::before {
   content: "";
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
   border-radius: 40%;
+  -webkit-box-shadow: inset 0px 0px 12px 7px rgba(246, 246, 246, 0.59);
+          box-shadow: inset 0px 0px 12px 7px rgba(246, 246, 246, 0.59);
   z-index: -1;
   top: 25px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+  -webkit-transition: 2.5s ease-in-out;
+  transition: 2.5s ease-in-out;
 }
 
-.restaurants-card-bottom__like:hover::before {
-  top: -2px;
+.restaurants-card-bottom__like:hover .like-background::before {
+  top: -15px;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }

@@ -19,26 +19,60 @@
 }
 
 @mixin like {
-    width: 25px;
-    fill-opacity: 0;
-    stroke: black;
-    transition: 
-        fill-opacity 0.5s 0.2s ease-out,
-        stroke-opacity 0.5s ease-in-out;
-        &:hover {
-            fill-opacity: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:27px;
+    height:27px;
+    overflow:hidden;
+    mask:url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 15 15" xml:space="preserve"><path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75 C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/></svg>') center/contain;
+    svg {
+        stroke: black;
+        fill: none;
+        stroke-opacity: 1;
+        transition: stroke-opacity 2s ease-in-out;
+        cursor: pointer;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
+        border-radius: 40%;
+        z-index: -1;
+        top:25px;
+        transform: rotate(0deg);
+        transition: 2s ease-in-out;
+    }
+    &:hover {
+        &::before {
+            top:-2px;
+            transform:rotate(360deg);
+        }
+        svg {
             stroke-opacity: 0;
-        }               
+        }
+    }              
 }
 
 
 @mixin main-button {
-    border-radius: 50px;
     padding: 15px 15px;
+    border: none;
+    border-radius: 50px;
     background: $button-background;
-    box-shadow: $box-shadow-button;  
+    box-shadow: $box-shadow;  
     color: $light-text;
     text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+        background: $button-hover-background;
+        box-shadow: $box-shadow-hover;  
+    }
 }
 
 @mixin padding-section {

@@ -1,19 +1,19 @@
 @import "libs/mixins.scss";
 @import "libs/variables.scss";
 
-footer {
+.footer {
     
     padding: 20px 0 20px 0;
     background-color: $footer-background;
 
-    .footer__title {
+    &__title {
         @include center-mobile;
         margin: 0 auto;
         color: $light-text;
         font-size: 18px;
     }
 
-    .footer__items {
+    &__items {
         @include center-mobile;
         @include list-style;
 
@@ -30,7 +30,8 @@ footer {
             }
         }
     }
-    .footer-item {
-        margin-bottom: 8px;
-    }
+}
+
+.footer-item {
+    margin-bottom: 8px;
 }

@@ -3,7 +3,7 @@
     100% { transform: rotate(360deg); }
    }
 
-    @keyframes spin-check {
+@keyframes spin-check {
     0% { transform: rotate(90deg); }
     30% { transform: rotate(90deg); }
     100% { transform: rotate(360deg); }
@@ -20,7 +20,12 @@
     }
 }
 
-@keyframes fade-point {
+@keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes translateY {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
 }

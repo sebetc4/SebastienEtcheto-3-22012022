@@ -76,7 +76,7 @@
   }
 }
 
-@-webkit-keyframes fade-point {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -85,12 +85,34 @@
   }
 }
 
-@keyframes fade-point {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes translateY {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes translateY {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -117,7 +139,7 @@
           animation: fade-out 0.5s ease-out 2s 1 forwards;
 }
 
-.loader .loader__circles {
+.loader__circles {
   position: relative;
   width: 50px;
   height: 50px;
@@ -129,7 +151,7 @@
           animation: spin-loader 1s linear infinite;
 }
 
-.loader .loader__circles::before {
+.loader__circles::before {
   content: '';
   position: absolute;
   top: 3px;
@@ -143,7 +165,7 @@
           animation: spin-loader 1s linear infinite;
 }
 
-.loader .loader__circles:after {
+.loader__circles:after {
   content: '';
   position: absolute;
   top: 9px;
@@ -157,27 +179,27 @@
           animation: spin-loader 2s linear infinite;
 }
 
-.loader .loader__text {
+.loader__text {
   margin-left: 30px;
   font-size: 30px;
   font-weight: bold;
 }
 
-.loader .loader__text .loader__point1 {
+.loader__point1 {
   color: #99E2D0;
-  -webkit-animation: fade-point 0.1s ease 0.6s 1 normal backwards;
-          animation: fade-point 0.1s ease 0.6s 1 normal backwards;
+  -webkit-animation: fade-in 0.1s ease 0.6s 1 normal backwards;
+          animation: fade-in 0.1s ease 0.6s 1 normal backwards;
 }
 
-.loader .loader__text .loader__point2 {
+.loader__point2 {
   color: #FF79DA;
-  -webkit-animation: fade-point 0.1s ease 1.2s 1 normal backwards;
-          animation: fade-point 0.1s ease 1.2s 1 normal backwards;
+  -webkit-animation: fade-in 0.1s ease 1.2s 1 normal backwards;
+          animation: fade-in 0.1s ease 1.2s 1 normal backwards;
 }
 
-.loader .loader__text .loader__point3 {
+.loader__point3 {
   color: #9356DC;
-  -webkit-animation: fade-point 0.1s ease 1.8s 1 normal backwards;
-          animation: fade-point 0.1s ease 1.8s 1 normal backwards;
+  -webkit-animation: fade-in 0.1s ease 1.8s 1 normal backwards;
+          animation: fade-in 0.1s ease 1.8s 1 normal backwards;
 }
 /*# sourceMappingURL=loader.css.map */

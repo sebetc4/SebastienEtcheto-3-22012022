@@ -1,24 +1,26 @@
 @import "libs/mixins.scss";
 @import "libs/variables.scss";
 
-header {
+.header {
     position: relative;
     z-index: 2;
     padding: 16px 0;
     @include flex;
 
-    a {
+    &__arrow {
         @include link-style;
 
-        .header__arrow {
-            font-size: 20px;
+        i {
             position: absolute;
+            top: 50%;
             left: 7%;
+            transform: translateY(-50%);
+            font-size:calc(12px + 2vw);
+            
         }
     }
-    
-
-    .header__logo {
+        
+    &__logo {
     width: 45%;
     max-width: 500px;
     }

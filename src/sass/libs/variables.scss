@@ -5,9 +5,11 @@ $tertiary-color: #99E2D0;
 $footer-background: #353535;
 $dark-background: #eaeaea;
 $light-background: #f6f6f6;
-$button-background: linear-gradient(171deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 78%);
+$button-background: linear-gradient(171deg, $secondary-color 0%, $primary-color 78%);
+$button-hover-background: linear-gradient(171deg, lighten($secondary-color, 10) 0%, lighten($primary-color, 10) 78%);
 $dark-text: #000000;
 $light-text: #ffffff;
 
 // Box shadows
-$box-shadow-button: 0px 4px 11px 0px rgba(0, 0, 0, 0.15)
+$box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-hover: 0px 4px 11px 0px rgba(0, 0, 0, 0.5);

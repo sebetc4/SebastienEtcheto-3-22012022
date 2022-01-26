@@ -16,27 +16,31 @@
     border-radius: 45px 45px 0 0;
     background-color: $light-background;
 
-    .menu__title {
+    &__title {
         padding-top: 15px;
         @include flex($j-c: space-between);
         @include center-mobile;
         
-        h1 {
-            font-size: 28px;
+        h2 {
+            font-size:calc(28px + 2vw);
         }
+    }
 
-        svg {
-            @include like             
-        }
+    &__like {
+        @include like
+
     }
 }
 
 .menu-items {
     @include center-mobile;
+}
 
-    .menu-meal__title {
+.menu-meal{
+
+    &__title {
         position: relative;
-        margin-bottom: 20px;
+        margin: 40px 0 20px 0;
         font-size: 18px;
         font-weight: 500;
 
@@ -51,21 +55,23 @@
         }
     }
 
-    .menu-meal__items {
+    &__items {
         @include list-style;
     }
 }
 
 .menu-card {
+    margin-top: 15px;
     height: 70px;
     background-color: $light-text;
-    box-shadow: $box-shadow-button;
+    box-shadow: $box-shadow;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
     
-    .menu-card__infos {
+    &__infos {
         min-width: 0;
         margin-left: 20px;
         display: flex;
@@ -74,26 +80,25 @@
         flex: 1;
     }
 
-    .menu-card__infos-title {
+    &__infos-title {
         margin: 10px 0 0 0;
         font-size: 18px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
-        
+        text-overflow: ellipsis;      
     }
 
-    .menu-card__infos-text {
+    &__infos-text {
         margin: 0 0 15px 0;
     }
 
-    .menu-card__price {
+    &__price {
         padding: 0 20px;
         @include flex;
         font-weight: 600;
     }
 
-    .menu-card__check {
+    &__check {
         width: 0px;
         display: flex;
         align-items: center;
@@ -115,14 +120,51 @@
         .menu-card__check {
             width: 58px;
 
-        i {
-            animation: spin-check 0.5s linear 1 forwards;
-        }
+            i {
+                animation: spin-check 0.5s linear 1 forwards;
+            }
         }
     }
-    
 }
 
+@for $i from 1 through 10 {
+    #menu-card#{$i} {
+        animation: fade-in 0.5s ease ($i / 4)+s 1 normal backwards,
+                   translateY 0.5s ease ($i / 4)+s 1 normal backwards;
+    }
+}
+
+@media screen and(min-width: 1250px) {
+    .menu-items {
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-meal {
+        width: 30%;
+    }
+
+    .menu__title {
+        max-width: 40% ;
+    }
+
+    .menu__like {
+        margin-left: 20px;
+        width: calc(27px + 1vw);
+        height: calc(27px + 1vw);
+        svg {
+            width: calc(27px + 1vw);
+            height: calc(27px + 1vw);
+        }
+        &::before {
+            width: calc(35px + 1vw);
+            height: calc(35px + 1vw);
+            top: calc(25px + 1vw);
+
+        }            
+    }
+}
 
 
   

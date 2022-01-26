@@ -1,9 +1,9 @@
-footer {
+.footer {
   padding: 20px 0 20px 0;
   background-color: #353535;
 }
 
-footer .footer__title {
+.footer__title {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
@@ -13,7 +13,7 @@ footer .footer__title {
   font-size: 18px;
 }
 
-footer .footer__items {
+.footer__items {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
@@ -22,21 +22,21 @@ footer .footer__items {
   list-style: none;
 }
 
-footer .footer__items a {
+.footer__items a {
   text-decoration: none;
   color: #000000;
   color: #ffffff;
 }
 
-footer .footer__items a i {
+.footer__items a i {
   margin-right: 10px;
 }
 
-footer .footer__items a .fa-hands-helping {
+.footer__items a .fa-hands-helping {
   font-size: 12px;
 }
 
-footer .footer-item {
+.footer-item {
   margin-bottom: 8px;
 }
 /*# sourceMappingURL=footer.css.map */

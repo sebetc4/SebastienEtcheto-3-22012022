@@ -1,4 +1,4 @@
-header {
+.header {
   position: relative;
   z-index: 2;
   padding: 16px 0;
@@ -17,18 +17,21 @@ header {
           align-items: center;
 }
 
-header a {
+.header__arrow {
   text-decoration: none;
   color: #000000;
 }
 
-header a .header__arrow {
-  font-size: 20px;
+.header__arrow i {
   position: absolute;
+  top: 50%;
   left: 7%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: calc(12px + 2vw);
 }
 
-header .header__logo {
+.header__logo {
   width: 45%;
   max-width: 500px;
 }

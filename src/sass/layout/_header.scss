@@ -1,8 +1,6 @@
 .header {
     position: relative;
-    z-index: 2;
-    padding: 16px 0;
-    @include flex;
+    @include logo ;
 
     &__arrow {
         @include link-style;
@@ -13,13 +11,7 @@
             left: 7%;
             transform: translateY(-50%);
             font-size:calc(12px + 2vw);
-            
         }
-    }
-        
-    &__logo {
-    width: 45%;
-    max-width: 500px;
     }
 }
 

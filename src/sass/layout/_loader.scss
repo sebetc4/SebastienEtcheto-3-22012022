@@ -1,11 +1,81 @@
+.header, .main * {
+    animation: fade-in-scale 2s ease 1 normal backwards;
+}
+
 .loader {
-    z-index: 99;
+    z-index: 10;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     @include flex;
-    background-color: rgba($dark-background, 0.9);
+    background-color: rgba($dark-background, 0.8);
     animation: fade-out 0.5s ease-out 2s 1 forwards;
+}
+
+.loader-logo{
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    @include logo;
+
+    &__logo {
+        fill: none;
+        stroke: black;
+        stroke-width: 1.5px;
+
+        .logo-path1 {
+        stroke: $primary-color;
+        stroke-dasharray: 98px;
+        stroke-dashoffset: 98px;
+        }
+        .logo-path2 {
+            stroke: $primary-color;
+            stroke-dasharray: 131px;
+            stroke-dashoffset: 131px;
+        }
+        .logo-path3 {
+            stroke: $tertiary-color;
+            stroke-dasharray: 171px;
+            stroke-dashoffset: 171px;
+        }
+        .logo-path4 {
+            stroke: $tertiary-color;
+            stroke-dasharray: 127px;
+            stroke-dashoffset: 127px;
+        }
+        .logo-path5 {
+            stroke: $secondary-color;
+            stroke-dasharray: 106px;
+            stroke-dashoffset: 106px;
+        }
+        .logo-path6 {
+            stroke: $secondary-color;
+            stroke-dasharray: 98px;
+            stroke-dashoffset: 98px;
+        }
+        .logo-path7 {
+            stroke: $secondary-color;
+            stroke-dasharray: 98px;
+            stroke-dashoffset: 98px;
+        }
+        .logo-path8 {
+            stroke: $secondary-color;
+            stroke-dasharray: 123px;
+            stroke-dashoffset: 123px;
+        }
+    }
+}
+@for $i from 1 through 8 {
+    .logo-path#{$i} {
+        animation: draw-logo 2s ease forwards;
+    }
+}
+
+.loader-spinner {
+
+    @include flex;
+
 
     &__circles {
         position: relative;

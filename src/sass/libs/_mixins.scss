@@ -5,6 +5,16 @@
     align-items: $a-i;
 }
 
+@mixin logo {
+    padding: 16px 0;
+    @include flex;
+
+    &__logo {
+        width: 45%;
+        max-width: 500px;
+        }
+}
+
 @mixin center-width ($width) {
     width: $width;
     margin-left: auto;

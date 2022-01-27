@@ -56,16 +56,15 @@ main {
 // Section de fonctionnement
 .functioning {
         @include padding-section;
-        @include center-mobile;
 
     &__title {
+        @include center-mobile;
         margin-bottom: 25px;
         font-size: 24px;
     }
     
     &__steps {
-        width: 100%;
-        max-width: 500px;
+        @include center-mobile;
         @include list-style;
     }
 }
@@ -80,10 +79,11 @@ main {
     box-shadow: $box-shadow;        
     background-color: $light-background;
     @include link-style;
+    transition: background-color 0.3s;
 
         
     &:hover {
-        background-color: $primary-color-light;
+        background-color: lighten($primary-color, 35);
     }
     
     &__number {
@@ -141,6 +141,11 @@ main {
     border-radius: 15px;
     box-shadow: $box-shadow;
     overflow: hidden;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.02)
+    }
     
     &__new {
         position: absolute;
@@ -185,5 +190,37 @@ main {
     }
 }
 
+@media #{$media-desktop} {
+    
+    .functioning__title, .restaurants__title {
+        text-align: center;
+    }
+
+    .functioning__steps {
+        @include center-desktop;
+        max-width: 1600px;
+        @include flex($j-c: space-between)
+    }
+    
+    .functioning-step {
+        position: relative;
+        width: 25%;
+    }
+
+    .functioning-step__arrow {
+        &::before{
+            position: absolute;
+            left: -26%;
+            content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+        }
+        &::after{
+            position: absolute;
+            right: -26%;
+            content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+        }
+
+
+    }
+}
 
 

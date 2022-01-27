@@ -1,4 +1,5 @@
 .header {
+    @include center-desktop;
     position: relative;
     @include logo ;
 

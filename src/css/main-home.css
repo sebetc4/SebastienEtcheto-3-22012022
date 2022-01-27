@@ -503,12 +503,6 @@ body, html {
   }
 }
 
-.header {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -516,8 +510,8 @@ body, html {
 }
 
 .header, .main * {
-  -webkit-animation: fade-in-scale 2s ease 1 normal backwards;
-          animation: fade-in-scale 2s ease 1 normal backwards;
+  -webkit-animation: fade-in-scale 1.8s ease 0.2s 1 normal backwards;
+          animation: fade-in-scale 1.8s ease 0.2s 1 normal backwards;
 }
 
 .loader {
@@ -744,6 +738,10 @@ body, html {
 }
 
 .header {
+  width: 90%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   padding: 16px 0;
   display: -webkit-box;
@@ -886,9 +884,9 @@ main {
   padding: 15px 15px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 78%);
-  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(171deg, #FF79DA, #9356DC, #ff9de4, #a674e2);
+  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
@@ -896,31 +894,40 @@ main {
   transition: -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  background-position: left center;
+  background-size: 600%;
+  background-position: 0%;
+  -webkit-transition: background-position 0.5s cubic-bezier(0.58, -0.02, 0.83, 0.67), -webkit-box-shadow 0.5s 0.2s cubic-bezier(0.28, 0.85, 0.83, 0.67);
+  transition: background-position 0.5s cubic-bezier(0.58, -0.02, 0.83, 0.67), -webkit-box-shadow 0.5s 0.2s cubic-bezier(0.28, 0.85, 0.83, 0.67);
+  transition: background-position 0.5s cubic-bezier(0.58, -0.02, 0.83, 0.67), box-shadow 0.5s 0.2s cubic-bezier(0.28, 0.85, 0.83, 0.67);
+  transition: background-position 0.5s cubic-bezier(0.58, -0.02, 0.83, 0.67), box-shadow 0.5s 0.2s cubic-bezier(0.28, 0.85, 0.83, 0.67), -webkit-box-shadow 0.5s 0.2s cubic-bezier(0.28, 0.85, 0.83, 0.67);
 }
 
 .presentation__button:hover {
-  background: linear-gradient(171deg, #fface8 0%, #ae80e5 78%);
-  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.4);
+  background-position: right center;
+  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.44);
+          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.44);
 }
 
 .functioning {
   padding-top: 25px;
   padding-bottom: 50px;
+}
+
+.functioning__title {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.functioning__title {
   margin-bottom: 25px;
   font-size: 24px;
 }
 
 .functioning__steps {
-  width: 100%;
+  width: 90%;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 0;
   list-style: none;
 }
@@ -943,11 +950,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 25px;
-  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
   background-color: #f6f6f6;
   text-decoration: none;
   color: #000000;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .functioning-step:hover {
@@ -1017,9 +1026,18 @@ main {
   margin-bottom: 20px;
   position: relative;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.restaurants-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .restaurants-card__new {
@@ -1128,5 +1146,45 @@ main {
 
 .restaurants-card-bottom__like:hover svg {
   stroke-opacity: 0;
+}
+
+@media (min-width: 1200px) {
+  .functioning__title, .restaurants__title {
+    text-align: center;
+  }
+  .functioning__steps {
+    width: 90%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .functioning-step {
+    position: relative;
+    width: 25%;
+  }
+  .functioning-step__arrow::before {
+    position: absolute;
+    left: -26%;
+    content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+  }
+  .functioning-step__arrow::after {
+    position: absolute;
+    right: -26%;
+    content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+  }
 }
 /*# sourceMappingURL=main-home.css.map */

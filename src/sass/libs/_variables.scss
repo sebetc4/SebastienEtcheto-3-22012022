@@ -1,5 +1,6 @@
 //  Couleurs
 $primary-color: #9356DC;
+$primary-color-light: lighten(#9356DC, 35);
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $footer-background: #353535;
@@ -12,4 +13,4 @@ $light-text: #ffffff;
 
 // Box shadows
 $box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-hover: 0px 4px 11px 0px rgba(0, 0, 0, 0.5);
+$box-shadow-hover: 0px 4px 11px 0px rgba(0, 0, 0, 0.4);

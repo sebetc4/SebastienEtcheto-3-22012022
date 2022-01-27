@@ -80,6 +80,11 @@ main {
     box-shadow: $box-shadow;        
     background-color: $light-background;
     @include link-style;
+
+        
+    &:hover {
+        background-color: $primary-color-light;
+    }
     
     &__number {
         width: 22px;
@@ -104,6 +109,7 @@ main {
         font-weight: 500;
     }
 }
+
 
 
 // Section de Restaurant

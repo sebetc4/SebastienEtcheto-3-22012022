@@ -1,18 +1,9 @@
+// Mise en page
 @mixin flex ($f-d: row, $j-c: center, $a-i: center) {
     display: flex;
     flex-direction: $f-d;
     justify-content: $j-c;
     align-items: $a-i;
-}
-
-@mixin logo {
-    padding: 16px 0;
-    @include flex;
-
-    &__logo {
-        width: 45%;
-        max-width: 500px;
-        }
 }
 
 @mixin center-width ($width) {
@@ -26,6 +17,34 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+}
+
+// 
+
+@mixin padding-section {
+    padding-top: 25px;
+    padding-bottom: 50px; 
+}
+
+@mixin list-style {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin link-style {
+    text-decoration: none;
+    color: $dark-text;
+}
+
+// Elements 
+@mixin logo {
+    padding: 16px 0;
+    @include flex;
+
+    &__logo {
+        width: 45%;
+        max-width: 500px;
+        }
 }
 
 @mixin like {
@@ -91,17 +110,3 @@
     }
 }
 
-@mixin padding-section {
-    padding-top: 25px;
-    padding-bottom: 50px; 
-}
-
-@mixin list-style {
-    padding-left: 0;
-    list-style: none;
-}
-
-@mixin link-style {
-    text-decoration: none;
-    color: $dark-text;
-}

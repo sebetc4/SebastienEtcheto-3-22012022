@@ -1,5 +1,5 @@
 .header, .main * {
-    animation: fade-in-scale 1.8s ease 0.2s 1 normal backwards;
+    animation: fade-in-scale 2s ease  1 normal backwards;
 }
 
 .loader {
@@ -49,12 +49,7 @@
             stroke-dasharray: 106px;
             stroke-dashoffset: 106px;
         }
-        .logo-path6 {
-            stroke: $secondary-color;
-            stroke-dasharray: 98px;
-            stroke-dashoffset: 98px;
-        }
-        .logo-path7 {
+        .logo-path6, .logo-path7 {
             stroke: $secondary-color;
             stroke-dasharray: 98px;
             stroke-dashoffset: 98px;

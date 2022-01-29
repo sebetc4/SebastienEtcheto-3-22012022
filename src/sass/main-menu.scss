@@ -19,13 +19,13 @@
         max-height: 450px;
         object-fit: cover;
     }
-
 }
 
 .menu {
     position: relative;
     width: 100%;
     padding-top: 15px;
+    padding-bottom: 75px;
     border-radius: 45px 45px 0 0;
     background-color: $light-background;
 
@@ -41,6 +41,12 @@
     &__like {
         @include like;
         margin-right: 25px;
+    }
+
+    &__button {
+        margin-top: 50px;
+        padding: 17px 45px;
+        @include main-button;
     }
 }
 
@@ -102,9 +108,13 @@
 
     &__infos-text {
         margin: 0 0 15px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
     }
 
     &__price {
+        margin-top: 30px;
         padding: 0 20px;
         @include flex;
         font-weight: 600;
@@ -115,7 +125,7 @@
         display: flex;
         align-items: center;
         background-color: $tertiary-color;
-        transition: width 0.5s;
+        transition: width 0.4s;
         overflow: hidden;
 
         i {
@@ -133,7 +143,7 @@
             width: 58px;
 
             i {
-                animation: spin-check 0.5s linear 1 forwards;
+                animation: spin-check 0.4s linear 1 forwards;
             }
         }
     }

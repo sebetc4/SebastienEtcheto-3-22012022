@@ -1,7 +1,5 @@
 .header {
-    @include center-desktop;
     position: relative;
-    @include logo ;
 
     &__arrow {
         @include link-style;
@@ -16,8 +14,13 @@
     }
 }
 
-@media screen and (min-width: 1600px) {
+.header-title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @include logo ;
+}
 
+@media screen and (min-width: 1600px) {
     .header__arrow i{
         font-size: 39px;
     }

@@ -48,6 +48,7 @@ main {
 
     &__button {
         margin-top: 15px;
+        padding: 17px 15px;
         @include main-button;
     }
 
@@ -70,6 +71,12 @@ main {
 }
 
 // Etapes de fonctionnement
+.functioning-arrow1, .functioning-arrow2 {
+    display: none;
+    transition:
+        all 0.3s 0.1s;
+    }
+
 .functioning-step {
     margin-bottom: 20px;
     margin-left: 11px;
@@ -141,10 +148,11 @@ main {
     border-radius: 15px;
     box-shadow: $box-shadow;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: all 0.3s;
 
     &:hover {
-        transform: scale(1.02)
+        transform: scale(1.02);
+        box-shadow: $box-shadow-hover;
     }
     
     &__new {
@@ -186,41 +194,59 @@ main {
 
     &__like {
         margin-right: 20px;
+        margin-bottom: 15px;
         @include like;
     }
 }
 
 @media #{$media-desktop} {
     
-    .functioning__title, .restaurants__title {
+    // Section de presentation
+    .presentation__title, .functioning__title, .restaurants__title {
         text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
     }
 
-    .functioning__steps {
-        @include center-desktop;
-        max-width: 1600px;
-        @include flex($j-c: space-between)
+    // Section de fonctionnement
+  
+    .functioning-arrow1, .functioning-arrow2 {
+        display: block;
     }
-    
+
     .functioning-step {
         position: relative;
         width: 25%;
     }
 
-    .functioning-step__arrow {
-        &::before{
-            position: absolute;
-            left: -26%;
-            content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
-        }
-        &::after{
-            position: absolute;
-            right: -26%;
-            content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
-        }
+    .functioning-step1:hover ~  .functioning-arrow1, .functioning-step2:hover ~  .functioning-arrow2 {
+        transform: scale(1.2);
+        color: $primary-color;
+    }
 
+    .functioning__steps {
+        @include center-desktop;
+        @include flex($j-c: space-between);
+    }
 
+    // Section restaurant
+    .restaurants__cards {
+        @include center-desktop;
+        @include flex($j-c: center);
+    }
+
+    .restaurants__cards {
+        flex-wrap: wrap;
+
+        li{
+            width: 35%
+        };
+    }
+
+    .restaurants-card {
+        margin: 0 20px 40px 20px;
     }
 }
+
 
 

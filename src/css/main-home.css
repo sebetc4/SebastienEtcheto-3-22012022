@@ -461,12 +461,24 @@ body, html {
   }
 }
 
+@-webkit-keyframes draw-logo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-logo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @-webkit-keyframes spin-check {
   0% {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
-  30% {
+  20% {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
@@ -481,25 +493,13 @@ body, html {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
-  30% {
+  20% {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes draw-logo {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-logo {
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
@@ -510,8 +510,8 @@ body, html {
 }
 
 .header, .main * {
-  -webkit-animation: fade-in-scale 1.8s ease 0.2s 1 normal backwards;
-          animation: fade-in-scale 1.8s ease 0.2s 1 normal backwards;
+  -webkit-animation: fade-in-scale 2s ease  1 normal backwards;
+          animation: fade-in-scale 2s ease  1 normal backwards;
 }
 
 .loader {
@@ -542,6 +542,10 @@ body, html {
   width: 100%;
   position: absolute;
   top: 0;
+  width: 90%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,13 +603,7 @@ body, html {
   stroke-dashoffset: 106px;
 }
 
-.loader-logo__logo .logo-path6 {
-  stroke: #FF79DA;
-  stroke-dasharray: 98px;
-  stroke-dashoffset: 98px;
-}
-
-.loader-logo__logo .logo-path7 {
+.loader-logo__logo .logo-path6, .loader-logo__logo .logo-path7 {
   stroke: #FF79DA;
   stroke-dasharray: 98px;
   stroke-dashoffset: 98px;
@@ -738,11 +736,32 @@ body, html {
 }
 
 .header {
+  position: relative;
+}
+
+.header__arrow {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header__arrow i {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: calc(12px + 2vw);
+}
+
+.header-title {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   width: 90%;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   padding: 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -759,23 +778,9 @@ body, html {
           align-items: center;
 }
 
-.header__logo {
+.header-title__logo {
   width: 45%;
   max-width: 500px;
-}
-
-.header__arrow {
-  text-decoration: none;
-  color: #000000;
-}
-
-.header__arrow i {
-  position: absolute;
-  top: 50%;
-  left: 7%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: calc(12px + 2vw);
 }
 
 @media screen and (min-width: 1600px) {
@@ -800,6 +805,7 @@ body, html {
 }
 
 .footer__items {
+  margin-top: 20px;
   width: 90%;
   max-width: 500px;
   margin-left: auto;
@@ -812,6 +818,8 @@ body, html {
   text-decoration: none;
   color: #000000;
   color: #ffffff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .footer__items a i {
@@ -822,8 +830,40 @@ body, html {
   font-size: 12px;
 }
 
+.footer__items a:hover {
+  color: #9356DC;
+}
+
 .footer-item {
   margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+  .footer__items {
+    width: 90%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__title {
+    text-align: center;
+  }
+  .footer-item {
+    margin: 0 30px;
+  }
 }
 
 main {
@@ -881,7 +921,10 @@ main {
 
 .presentation__button {
   margin-top: 15px;
-  padding: 15px 15px;
+  padding: 17px 15px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   border: none;
   border-radius: 50px;
   background: linear-gradient(171deg, #FF79DA, #9356DC, #ff9de4, #a674e2);
@@ -930,6 +973,12 @@ main {
   margin-right: auto;
   padding-left: 0;
   list-style: none;
+}
+
+.functioning-arrow1, .functioning-arrow2 {
+  display: none;
+  -webkit-transition: all 0.3s 0.1s;
+  transition: all 0.3s 0.1s;
 }
 
 .functioning-step {
@@ -1029,15 +1078,15 @@ main {
   -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .restaurants-card:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+  -webkit-box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.44);
+          box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.44);
 }
 
 .restaurants-card__new {
@@ -1090,6 +1139,7 @@ main {
 
 .restaurants-card-bottom__like {
   margin-right: 20px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -1149,15 +1199,28 @@ main {
 }
 
 @media (min-width: 1200px) {
-  .functioning__title, .restaurants__title {
+  .presentation__title, .functioning__title, .restaurants__title {
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .functioning-arrow1, .functioning-arrow2 {
+    display: block;
+  }
+  .functioning-step {
+    position: relative;
+    width: 25%;
+  }
+  .functioning-step1:hover ~ .functioning-arrow1, .functioning-step2:hover ~ .functioning-arrow2 {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: #9356DC;
   }
   .functioning__steps {
     width: 90%;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1172,19 +1235,34 @@ main {
         -ms-flex-align: center;
             align-items: center;
   }
-  .functioning-step {
-    position: relative;
-    width: 25%;
+  .restaurants__cards {
+    width: 90%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .functioning-step__arrow::before {
-    position: absolute;
-    left: -26%;
-    content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+  .restaurants__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .functioning-step__arrow::after {
-    position: absolute;
-    right: -26%;
-    content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 448 512" xml:space="preserve"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+  .restaurants__cards li {
+    width: 35%;
+  }
+  .restaurants-card {
+    margin: 0 20px 40px 20px;
   }
 }
 /*# sourceMappingURL=main-home.css.map */

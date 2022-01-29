@@ -44,6 +44,7 @@
 
 // Elements 
 @mixin logo {
+    @include center-desktop;
     padding: 16px 0;
     @include flex;
 
@@ -100,7 +101,9 @@
 
 
 @mixin main-button {
-    padding: 15px 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     border: none;
     border-radius: 50px;
     background: $button-background;

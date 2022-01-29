@@ -38,14 +38,15 @@
     100% { transform: rotate(360deg); }
 }
 
-@keyframes spin-check {
-    0% { transform: rotate(90deg); }
-    30% { transform: rotate(90deg); }
-    100% { transform: rotate(360deg); }
-}
-
 @keyframes draw-logo {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+// Animation menu
+@keyframes spin-check {
+    0% { transform: rotate(90deg); }
+    20% { transform: rotate(90deg); }
+    100% { transform: rotate(360deg); }
 }

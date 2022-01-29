@@ -11,12 +11,14 @@
     }
 
     &__items {
+        margin-top: 20px;
         @include center-mobile;
         @include list-style;
 
         a {
             @include link-style;
             color: $light-text;
+            transition: color 0.3s;
 
             i {
                 margin-right: 10px;
@@ -25,10 +27,32 @@
             .fa-hands-helping {
                 font-size: 12px;
             }
+
+            &:hover {
+               color: $primary-color; 
+            }
         }
     }
 }
 
 .footer-item {
     margin-bottom: 8px;
+}
+
+@media #{$media-desktop} {
+    .footer{
+    
+        &__items {
+            @include center-desktop;
+            @include flex;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+
+    .footer-item {
+        margin: 0 30px;
+    }
 }

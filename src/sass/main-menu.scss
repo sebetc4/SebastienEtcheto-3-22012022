@@ -51,7 +51,8 @@
 }
 
 .menu-items {
-    @include center-mobile;
+    @include center-width(94%);
+    max-width: 500px;
 }
 
 .menu-meal{
@@ -80,7 +81,6 @@
 
 .menu-card {
     margin-top: 15px;
-    height: 70px;
     background-color: $light-text;
     box-shadow: $box-shadow;
     border-radius: 15px;
@@ -91,10 +91,9 @@
     
     &__infos {
         min-width: 0;
-        margin-left: 20px;
+        margin-left: 10px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         flex: 1;
     }
 
@@ -107,16 +106,16 @@
     }
 
     &__infos-text {
-        margin: 0 0 15px 0;
+        margin: 10px 0 15px 0;
+        font-size: 14px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; 
     }
 
     &__price {
-        margin-top: 30px;
         padding: 0 20px;
-        @include flex;
+        @include flex($a-i: flex-end);
         font-weight: 600;
     }
 

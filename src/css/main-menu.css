@@ -844,8 +844,8 @@ body, html {
 .menu-card__infos-title {
   margin: 10px 0 0 0;
   font-size: 18px;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -854,6 +854,7 @@ body, html {
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -977,9 +978,13 @@ body, html {
   }
   .menu__title {
     max-width: 40%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menu__title h2 {
-    font-size: 50px;
+    font-size: 48px;
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=main-menu.css.map */

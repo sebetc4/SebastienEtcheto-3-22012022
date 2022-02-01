@@ -157,6 +157,11 @@
 }
 
 @media #{$media-desktop} {
+
+    .main__image {
+        @include center-width(1600px)
+    }
+    
     .menu {
         max-width: 1350px;
         margin-right: auto;

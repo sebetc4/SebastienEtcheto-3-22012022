@@ -159,7 +159,9 @@
 @media #{$media-desktop} {
 
     .main__image {
-        @include center-width(1600px)
+        max-width: 1600px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .menu {

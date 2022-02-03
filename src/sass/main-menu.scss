@@ -33,7 +33,7 @@
         @include flex($j-c: space-between);
         @include center-mobile;
         
-        h2 {
+        h1 {
             font-size:28px;
         }
     }
@@ -181,14 +181,18 @@
     }
 
     .menu__title {
-        max-width: 40%;
+        max-width: 100%;
         justify-content: center;
 
-        h2 {
-            font-size: 45px;
-            margin-right: 20px;
+        h1 {
+            font-size: 50px;
+            margin-right: 30px;
         }
     }
+
+    // .menu-card__infos-title, .menu-card__infos-text {
+    //     white-space: nowrap;
+    // }
 }
 
   

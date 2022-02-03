@@ -509,9 +509,14 @@ body, html {
   /* Opera/IE 8+ */
 }
 
-.header, .main * {
-  -webkit-animation: fade-in-scale 2s ease  1 normal backwards;
-          animation: fade-in-scale 2s ease  1 normal backwards;
+.header {
+  -webkit-animation: fade-in 2s ease-in 1 normal backwards;
+          animation: fade-in 2s ease-in 1 normal backwards;
+}
+
+.main * {
+  -webkit-animation: fade-in-scale 2s ease 1 normal backwards;
+          animation: fade-in-scale 2s ease 1 normal backwards;
 }
 
 .loader {
@@ -542,34 +547,13 @@ body, html {
   width: 100%;
   position: absolute;
   top: 0;
-  width: 90%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 16px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loader-logo__logo {
   width: 45%;
   max-width: 500px;
 }
 
 .loader-logo__logo {
   fill: none;
-  stroke: black;
   stroke-width: 1.5px;
 }
 
@@ -737,6 +721,19 @@ body, html {
 
 .header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__arrow {
@@ -753,37 +750,13 @@ body, html {
   font-size: calc(12px + 2vw);
 }
 
-.header-title {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  width: 90%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+.header__logo {
   padding: 16px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-title__logo {
   width: 45%;
   max-width: 500px;
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1200px) {
   .header {
     width: 90%;
     max-width: 1600px;

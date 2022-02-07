@@ -1,5 +1,5 @@
 # titre Projet 3 Openclassrooms
-Dynamisez une page web avec des animations CSS
+__Dynamisez une page web avec des animations CSS__
 
 ------
 

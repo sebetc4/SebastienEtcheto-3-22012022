@@ -8,7 +8,6 @@ $footer-background: #353535;
 $dark-background: #eaeaea;
 $light-background: #f6f6f6;
 $button-background: linear-gradient(171deg, $secondary-color, $primary-color, $secondary-color-light, $primary-color-light);
-$button-hover-background: linear-gradient(171deg, lighten($secondary-color, 10) 0%, lighten($primary-color, 10) 78%);
 $dark-text: #000000;
 $light-text: #ffffff;
 
@@ -16,4 +15,5 @@ $light-text: #ffffff;
 $box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.2);
 $box-shadow-hover: 0px 4px 11px 0px rgba(0, 0, 0, 0.44);
 
+// Media queries
 $media-desktop: screen and (min-width: 1200px)

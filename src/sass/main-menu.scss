@@ -8,6 +8,7 @@
 @import "layout/footer";
 
 .main__image {
+    position: relative;
     height: calc(160px + 15vw);
     max-height: 300px;
 
@@ -133,6 +134,7 @@
             padding: 3px;
             border-radius: 50%;
             font-size: 13px;
+            overflow: hidden;
             background-color: $light-text;
             color: $tertiary-color;
         }
@@ -189,10 +191,6 @@
             margin-right: 30px;
         }
     }
-
-    // .menu-card__infos-title, .menu-card__infos-text {
-    //     white-space: nowrap;
-    // }
 }
 
   

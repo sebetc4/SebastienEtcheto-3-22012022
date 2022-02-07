@@ -636,6 +636,7 @@ body, html {
 }
 
 .main__image {
+  position: relative;
   height: calc(160px + 15vw);
   max-height: 300px;
 }
@@ -890,6 +891,7 @@ body, html {
   padding: 3px;
   border-radius: 50%;
   font-size: 13px;
+  overflow: hidden;
   background-color: #ffffff;
   color: #99E2D0;
 }

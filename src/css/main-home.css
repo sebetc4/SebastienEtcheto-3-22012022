@@ -510,13 +510,13 @@ body, html {
 }
 
 .header {
-  -webkit-animation: fade-in 2s ease-in 1 normal backwards;
-          animation: fade-in 2s ease-in 1 normal backwards;
+  -webkit-animation: fade-in 2s ease-in 1;
+          animation: fade-in 2s ease-in 1;
 }
 
 .main * {
-  -webkit-animation: fade-in-scale 2s ease 1 normal backwards;
-          animation: fade-in-scale 2s ease 1 normal backwards;
+  -webkit-animation: fade-in-scale 2s ease 1;
+          animation: fade-in-scale 2s ease 1;
 }
 
 .loader {
@@ -681,7 +681,7 @@ body, html {
           animation: spin-loader 1s linear infinite;
 }
 
-.loader-spinner__circles:after {
+.loader-spinner__circles::after {
   content: '';
   position: absolute;
   top: 9px;

@@ -87,11 +87,6 @@ main {
     background-color: $light-background;
     @include link-style;
     transition: background-color 0.3s;
-
-        
-    &:hover {
-        background-color: lighten($primary-color, 35);
-    }
     
     &__number {
         width: 22px;
@@ -109,11 +104,20 @@ main {
     &__icon {
         padding: 0 7% 0 4%;
         font-size: 19px;
+        transition: color 0.3s;
     }
 
     &__text {
         color: $dark-text;
         font-weight: 500;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 35);
+
+        .functioning-step__icon {
+            color: $primary-color;
+        }
     }
 }
 

@@ -168,7 +168,17 @@
     .menu {
         max-width: 1350px;
         margin-right: auto;
-        margin-left: auto;    
+        margin-left: auto;  
+        
+        &__title {
+            max-width: 100%;
+            justify-content: center;
+    
+            h1 {
+                font-size: 50px;
+                margin-right: 30px;
+            }
+        }
     }
     
     .menu-items {
@@ -179,16 +189,6 @@
 
     .menu-meal {
         width: 30%;
-    }
-
-    .menu__title {
-        max-width: 100%;
-        justify-content: center;
-
-        h1 {
-            font-size: 50px;
-            margin-right: 30px;
-        }
     }
 }
 

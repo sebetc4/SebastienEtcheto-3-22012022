@@ -1194,7 +1194,6 @@ main {
     display: block;
   }
   .functioning-step {
-    position: relative;
     width: 25%;
   }
   .functioning-step1:hover ~ .functioning-arrow1, .functioning-step2:hover ~ .functioning-arrow2 {
@@ -1239,8 +1238,6 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .restaurants__cards {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }

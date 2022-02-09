@@ -219,7 +219,6 @@ main {
     }
 
     .functioning-step {
-        position: relative;
         width: 25%;
     }
 
@@ -237,14 +236,11 @@ main {
     .restaurants__cards {
         @include center-desktop;
         @include flex($j-c: center);
-    }
-
-    .restaurants__cards {
         flex-wrap: wrap;
 
         li{
-            width: 35%
-        };
+            width: 35%;
+        }
     }
 
     .restaurants-card {

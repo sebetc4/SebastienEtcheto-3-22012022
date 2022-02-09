@@ -1,4 +1,4 @@
-# titre Projet 3 Openclassrooms
+# Projet 3 Openclassrooms
 __Dynamisez une page web avec des animations CSS__
 
 ------

@@ -1131,6 +1131,7 @@ main {
 .restaurants-card-bottom__like svg {
   position: absolute;
   top: 0;
+  right: 0;
   width: 25px;
   stroke: black;
   fill: none;

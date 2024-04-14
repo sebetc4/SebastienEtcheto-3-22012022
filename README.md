@@ -1,24 +1,19 @@
-# Projet 3 Openclassrooms
-__Dynamisez une page web avec des animations CSS__
+# Project 3 OpenClassrooms
+__Enhance a web page with CSS animations__
 
 ------
 
-## Scénario:
+## Scenario
 
-Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
+Ohmyfood! is a young startup aiming to establish itself in the restaurant industry. The goal is to develop a 100% mobile website that lists menus from gourmet restaurants. In addition to traditional booking systems, customers will be able to compose their meal menu so that the dishes are ready upon their arrival. No more waiting times at the restaurant!
 
 ------
 
-## Compétences évaluées:
+## Skills Assessed
 
-* Assurer la cohérence graphique d'un site web
-* Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
-* Mettre en œuvre des effets CSS graphiques avancés
-* Mettre en place son environnement Front-End
-* Mettre en place une structure de navigation pour un site web
-
-----------
-
-ETCHETO Sébastien
-
+* Ensuring the graphical consistency of a website
+* Using a version control system for project tracking and hosting
+* Implementing advanced graphical CSS effects
+* Setting up the Front-End environment
+* Establishing a navigation structure for a website
 
